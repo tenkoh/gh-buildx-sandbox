@@ -17,6 +17,5 @@ jobs:
       - name: build and push
         uses: docker/build-push-action@v6
         with:
-          context: .
           push: true
           tags: ${{ secrets.CONTAINER_REGISTRY_URL }}/parrot:latest
