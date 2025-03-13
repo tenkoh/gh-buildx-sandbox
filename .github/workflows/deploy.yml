@@ -19,7 +19,7 @@ jobs:
       - name: build and push
         uses: docker/build-push-action@v6
         with:
-          push: true
+          push: false # 一時無効化
           tags: ${{ secrets.CONTAINER_REGISTRY_URL }}/parrot:latest
       - name: confirm images
         run: docker images
