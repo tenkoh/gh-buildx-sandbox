@@ -23,3 +23,5 @@ jobs:
           tags: ${{ secrets.CONTAINER_REGISTRY_URL }}/parrot:latest
       - name: confirm images
         run: docker images
+      - name: confirm cache dir
+        run: ls -la /var/lib/docker/buildx
